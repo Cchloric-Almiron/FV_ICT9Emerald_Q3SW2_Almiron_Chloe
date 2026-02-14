@@ -27,24 +27,37 @@
     background-image:url('https://i.pinimg.com/originals/90/9e/25/909e25893881b145777c4c02b69a788a.gif');
     background-repeat:no-repeat;
     background-size:cover;
-    color:rgb(255, 181, 212);
+    color:rgb(255, 87, 157);
 
     }
 
-    #Brands{
-
+    #brand-btn{
+    background-color:rgb(255, 87, 157);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius:40px;
+    color:white;
+    padding:10px;
+    border:1px dashed white;
 
     }
 
+    #footer{
+    background-color:rgb(255, 87, 157);
+    color:white;
+    text-align:center;
+    font-size:10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+    }
     </style>
 </head>
 <body>
     
-      <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:rgb(255, 201, 223);">
+      <nav class="navbar navbar-expand-sm " style="background-color:#ffe8f1d0;box-shadow: 0 8px 20px rgba(0,0,0,0.2); color:rgb(255, 87, 157);">
 
   <div class="container-fluid">
 
-    <a class="navbar-brand" href="#" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"><img src="Shopping_app_icon-removebg-preview.png" style="height:70px;">Find My Bag</a>
+    <a class="navbar-brand" href="#" style="font-family:Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><img src="1pc_Plain_Tumbler-removebg-preview.png" style="height:60px; margin-bottom:10px;">Locate to Hydrate</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
 
@@ -53,15 +66,15 @@
 
     <div class="collapse navbar-collapse" id="mynavbar">
 
-      <ul class="navbar-nav me-auto" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ">
+      <ul class="navbar-nav me-auto" style= " font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
         <li class="nav-item">
-          <a class="nav-link" href="page2">Shop</a>
+          <a class="nav-link">Shop</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="page3">Products</a>
+          <a class="nav-link" >Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="page4">FAQS</a>
+          <a class="nav-link" >FAQS</a>
         </li>
       </ul>
 
@@ -73,14 +86,17 @@
   </div>
 </nav>
 
-<div style="background-color:#ffffff; color:rgba(127, 0, 0, 0.438); height:11px;font-size:1px; box-shadow:90px;">yuhz</div>
+<div style="background-color:rgb(255, 87, 157); color:rgb(255, 87, 157); height:11px;font-size:1px; box-shadow:90px;">yuhz</div>
 
 <br>
 
 <center>
 <div id="Intro-Box">
-    <h1>Looking for a new bag?</h1>
-    <hr>
+  <div class="container" style="background-color: rgb(255, 87, 157); height:5px; font-size:1px; margin-bottom:12px;">Yay</div>
+
+    <h1>Want a new tumbler but don't know what to get?</h1>
+    <p>Welcome! Here, you simply have to tell us your buget and we can help locate the perfect tumbler for you!!</p>
+    <div class="container" style="background-color: rgb(255, 87, 157); height:5px; font-size:1px; margin-bottom:12px;">Yay</div>
 
    <details class="ontoggle">
         <summary>Instruction</summary>
@@ -89,34 +105,94 @@
     </details>
 
     <form action="#">
-        <label form="num1">Find out your eligibility with a 30% discount!</label>
+        <label form="num1">What is your budget?</label>
         <input type="number" id="num1" class="form-control" placeholder="Key in a number" required>
 
         <br>
 
-        <button type="submit" class=" btn btn-success" onmouseclick="calculate()">Calculate</button>
+        <button type="submit" class=" btn btn-success" onclick="calculate()">Find out!</button>
+        <br><br>
+        <p id="result"></p>
 
     </form>
     
     <script>
-        document.getElementById('instruct').innerHTML="Input your budget in order to look for your bag..";
+        document.getElementById('instruct').innerHTML="Input your budget in order to determine your eligibility.";
 
         function calculate(){
-            var number1 = document.getElementById("number1").value; //get value from the first input box.
 
-            var discount = (Number(number1) - (number1) * 0.30); = final //calculate the discount
+          var num1 = document.getElementById("num1").value; //get value from input box
+          var discount = num1 * 0.30; //discount rate
+          var finalprice = num1 - discount; //get discount
 
+          document.getElementById("result").innerHTML = "<p> PHP "+ finalprice.toFixed(2) + "</p>"; 
+          
         }
     </script>
 
 </div>
 </center>
-
-<div id="Brands">
-
 </div>
 
+<br>
+<div class="container-fluid ">
+        <div class="row gap-3 justify-content-center">
+        <div class="col-lg-4 h-80" style="padding:40px; background-color:#ffe8f1d0; box-shadow: 0 8px 20px rgba(0,0,0,0.2); border-radius:40px;" style="height:100px; color:rgb(255, 87, 157); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+
+        <h3 style="text-align:center; font-weight:200px;">Brand and Discounts</h1>
+
+<div style="background-color:rgb(255, 87, 157); color:rgb(255, 87, 157); height:3px;font-size:1px; box-shadow:90px; margin-top:10px; margin-bottom:10px;">yuhz</div>
+
+<center>
+<button id="brand-btn">Owala</button>
+<button id="brand-btn">Sunnies</button>
+<button id="brand-btn">Aquaflask</button>
+
+
+<div style="background-color:rgb(255, 87, 157); color:rgb(255, 87, 157); height:3px;font-size:1px; box-shadow:90px; margin-top:10px; margin-bottom:10px; ">yuhz</div>
+
+<img src="Promoção_Moda_Feminina-removebg-preview.png" style="height:200px; width:200px;">
+
+</center>
+
+<div style="background-color:rgb(255, 87, 157); color:rgb(255, 87, 157); height:3px;font-size:1px; box-shadow:90px; margin-top:10px; margin-bottom:10px;">yuhz</div>
+
+          </div>
+
+        <div class="col-lg-4 h-80" style="padding:40px; background-color:#ffe8f1d0; box-shadow: 0 8px 20px rgba(0,0,0,0.2); border-radius:40px;" style="height:100px; color:rgb(255, 87, 157); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+
+        <h3 style="text-align:center; font-weight:200px;">Store Location</h1>
+
+<div style="background-color:rgb(255, 87, 157); color:rgb(255, 87, 157); height:3px;font-size:1px; box-shadow:90px; margin-top:10px; margin-bottom:10px;">yuhz</div>
+
+<button id="brand-btn">True Value</button>
+<ul>
+  <li>Alabang Town Center</li>
+  <li>Ayala Malls The 30th</li>
+  <li>Eastwood</li>
+</ul>
+
+<button id="brand-btn">Sunnies Studios</button>
+
+<ul>
+  <li>Glorietta 2</li>
+  <li>SM Megamall</li>
+  <li>SM</li>
+</ul>
+
+
+<div style="background-color:rgb(255, 87, 157); color:rgb(255, 87, 157); height:3px;font-size:1px; box-shadow:90px; margin-top:10px; margin-bottom:10px;">yuhz</div>
+
+</div>
+       </div>
+      </div>
+
+<br><br>
+<div id="footer" class="container-fluid">
+<p>© Almiron</p>
+</div>
 
 
 </body>
 </html>
+
